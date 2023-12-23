@@ -153,9 +153,9 @@ module.exports = {
         event.enrolledMembers.map(async (memberID) => {
           const sendNotification = new Notification({
             receiver: memberID,
-            title: `New Attendance Notification - Event ID: ${event.shortID}`,
-            content: `Event owner: [${currUser.firstName} ${currUser.lastName}] had created an attendance in the event: ${event.name} (${event.code}-${event.session}).
-            Enter room using URL: ${OfficialURL}/event/${event.shortID}/attendanceRoom/${attendance._id}`,
+            title: `Jadwal absensi baru - ID Acara : ${event.shortID}`,
+            content: `[${currUser.firstName} ${currUser.lastName}] meminta anda untuk melakukan presensi kehadiran pada acara: ${event.name} (${event.code}-${event.session}).
+            silahkan klik link berikut untuk detail lebih lanjut: ${OfficialURL}/event/${event.shortID}/attendanceRoom/${attendance._id}`,
           });
           await sendNotification.save();
           Object.assign(event, {

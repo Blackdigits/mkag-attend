@@ -122,9 +122,9 @@ module.exports = {
         if (newPerson.userLevel === 0) {
           const notification = new Notification({
             receiver: newPerson.id,
-            title: 'Welcome To Attendlytical',
+            title: 'Selamat datang di Pelawa.id',
             content:
-              'Please remember to upload your face photograph for attendance verification',
+              'Terima kasih telah bersedia menggunakan aplikasi Pelawa.id, Silahkan untuk menambahkan foto anda di menu Upload foto.',
           });
           await notification.save();
         }
